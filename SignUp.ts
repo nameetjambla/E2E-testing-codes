@@ -2,6 +2,8 @@ import { protractor } from "protractor/built/ptor";
 import {browser,element,by} from "protractor";
 export class Signuppage1{
 static navigateToHomeScreen: any;
+  static signup: any;
+  static getError: any;
 navigateToHomeScreen(){
     element(by.css('[href="#/onboard"]')).click();
 }
@@ -34,6 +36,10 @@ setpasswrd(newu,psd,cnfp)
     //reset button
     const resetbtn=element(by.name("rstbtn"));
     resetbtn.click();
+}
+getError()
+{
+return element(by.id("errormsg")).getText();
 }
 }
 
